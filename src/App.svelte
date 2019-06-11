@@ -1,4 +1,6 @@
 <script>
+	import Form from './Form.svelte';
+
 	let name = 'Alex';
 
 	let tasks = [
@@ -35,4 +37,4 @@
 		<li>Nothing there</li>
 	{/each}
 </ul>
-<input type="text" bind:value="{task}"><button on:click="{addTask}">Add</button>
+<Form />
