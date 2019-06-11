@@ -1,5 +1,5 @@
 <script>
-	export let name;
+	let name = '';
 </script>
 
 <style>
@@ -9,3 +9,4 @@
 </style>
 
 <h1>Hello {name}!</h1>
+<input type="text" bind:value="{name}">
