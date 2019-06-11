@@ -5,7 +5,8 @@
 
 
     function addTask(){
-        dispatch('add');
+        dispatch('add', task);
+        task = '';
     }
 </script>
 
