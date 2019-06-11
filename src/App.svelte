@@ -7,6 +7,8 @@
 		'code'
 	];
 
+	$: message = tasks.length ? `You have ${tasks.length} tasks` : 'You have no tasks';
+
 	let task = '';
 
 	function addTask(){
@@ -24,7 +26,8 @@
 
 <h1>Hello {name}!</h1>
 <input type="text" bind:value="{name}">
-
+<hr />
+{message}
 <ul>
 	{#each tasks as task}
 		<li>{task}</li>
