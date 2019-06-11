@@ -11,7 +11,7 @@
 
 	$: message = tasks.length ? `You have ${tasks.length} tasks` : 'You have no tasks';
 
-	let task = '';
+	let task = 'New Task';
 
 	function addTask(){
 		tasks = [...tasks, task];
@@ -37,4 +37,4 @@
 		<li>Nothing there</li>
 	{/each}
 </ul>
-<Form bind:task="{name}"/>
+<Form bind:task/>
