@@ -1,4 +1,5 @@
 <script>
+	import {scale, fly} from 'svelte/transition'
 	import Form from './Form.svelte';
 	import Quote from './Quote.svelte';
 
@@ -41,5 +42,7 @@
 <hr />
 <button on:click="{() => isQuotesVisible = !isQuotesVisible}">Toggle Quotes</button>
 {#if isQuotesVisible}
-	<Quote>Best Quote</Quote>
+	<div in:scale="{{duration:1000}}" out:fly="{{duration: 500, y: 50}}">
+		<Quote>Best Quote</Quote>
+	</div>
 {/if}
