@@ -6,6 +6,8 @@
             .then(res => res.json())
             .then(data => data[0].content);
     }
+
+    loadNewQuote();
 </script>
 
 <style>
@@ -15,12 +17,8 @@
 </style>
 
 <h1>Random Quote!</h1>
-{#await quote}
-    loading
-{:then value}
+{#await quote then value}
     {@html value}
-{:catch}
-    Error
 {/await}
 
 <button on:click={loadNewQuote}>Load</button>
