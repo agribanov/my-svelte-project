@@ -1,6 +1,13 @@
 <script>
+    import {createEventDispatcher} from 'svelte';
     export let task = 'test';
+    const dispatch = createEventDispatcher();
+
+
+    function addTask(){
+        dispatch('add');
+    }
 </script>
 
 <input type="text" bind:value="{task}">
-<button>Add</button>
+<button on:click="{addTask}">Add</button>

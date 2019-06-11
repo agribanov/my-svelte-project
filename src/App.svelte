@@ -37,4 +37,4 @@
 		<li>Nothing there</li>
 	{/each}
 </ul>
-<Form bind:task/>
+<Form bind:task on:add="{addTask}"/>
