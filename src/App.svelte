@@ -10,6 +10,8 @@
 		'code'
 	];
 
+	let isQuotesVisible = false;
+
 	$: message = tasks.length ? `You have ${tasks.length} tasks` : 'You have no tasks';
 
 	function addTask(e){
@@ -37,4 +39,7 @@
 </ul>
 <Form on:add="{addTask}"/>
 <hr />
-<Quote>Best Quote</Quote>
+<button on:click="{() => isQuotesVisible = !isQuotesVisible}">Toggle Quotes</button>
+{#if isQuotesVisible}
+	<Quote>Best Quote</Quote>
+{/if}
