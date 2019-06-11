@@ -1,5 +1,5 @@
 <script>
-    let task = 'test';
+    export let task = 'test';
 </script>
 
 <input type="text" bind:value="{task}">
