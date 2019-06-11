@@ -5,7 +5,14 @@
 		'Wake up',
 		'get some coffee',
 		'code'
-	]
+	];
+
+	let task = '';
+
+	function addTask(){
+		tasks.push(task);
+		task = '';
+	}
 
 </script>
 
@@ -25,3 +32,4 @@
 		<li>Nothing there</li>
 	{/each}
 </ul>
+<input type="text" bind:value="{task}"><button on:click="{addTask}">Add</button>
