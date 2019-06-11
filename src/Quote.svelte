@@ -16,7 +16,9 @@
     }
 </style>
 
-<h1>Random Quote!</h1>
+<h1>
+<slot>Default heading</slot>
+</h1>
 {#await quote then value}
     {@html value}
 {/await}

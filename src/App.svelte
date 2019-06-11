@@ -37,4 +37,4 @@
 </ul>
 <Form on:add="{addTask}"/>
 <hr />
-<Quote />
+<Quote>Best Quote</Quote>
