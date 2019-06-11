@@ -1,5 +1,6 @@
 <script>
 	import Form from './Form.svelte';
+	import Quote from './Quote.svelte';
 
 	let name = 'Alex';
 
@@ -35,3 +36,5 @@
 	{/each}
 </ul>
 <Form on:add="{addTask}"/>
+<hr />
+<Quote />
