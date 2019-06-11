@@ -10,7 +10,7 @@
 	let task = '';
 
 	function addTask(){
-		tasks.push(task);
+		tasks = [...tasks, task];
 		task = '';
 	}
 
